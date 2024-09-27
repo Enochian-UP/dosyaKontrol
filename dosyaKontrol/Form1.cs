@@ -57,7 +57,6 @@ namespace dosyaKontrol
         private void Form1_Load_1(object sender, EventArgs e)
         {
             this.BackColor = System.Drawing.SystemColors.Control;
-            sp.Open();
             Getir();
             aktarimTimer.Start();       // 10 saniyede bir aktarımdan aktarılana doğru aktarım işlemi başlıyor
             LoglariGoster();
@@ -1104,6 +1103,10 @@ namespace dosyaKontrol
                 sp.Dispose();
             }
 
+        }
+        private void btn_port_Click(object sender, EventArgs e)
+        {
+            sp.Open(); // Okuyucu takılmadığı zaman formLoad fonksiyonunda olduğundan form açılmıyordu o yüzden butona aldım
         }
     }
 }

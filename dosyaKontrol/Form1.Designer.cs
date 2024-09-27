@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLoadExcel = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.scannerBilgi = new System.Windows.Forms.TextBox();
             this.lbl_Scan = new System.Windows.Forms.Label();
             this.lbl_YeniVeri = new System.Windows.Forms.Label();
+            this.btn_port = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sqlTablosu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.excelTablosu)).BeginInit();
@@ -106,14 +107,14 @@
             // sqlTablosu
             // 
             this.sqlTablosu.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sqlTablosu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sqlTablosu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.sqlTablosu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sqlTablosu.Location = new System.Drawing.Point(334, 36);
             this.sqlTablosu.Name = "sqlTablosu";
@@ -283,14 +284,14 @@
             // 
             this.yeniDataGrid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.yeniDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.yeniDataGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.yeniDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.yeniDataGrid.Location = new System.Drawing.Point(887, 436);
             this.yeniDataGrid.Name = "yeniDataGrid";
             this.yeniDataGrid.Size = new System.Drawing.Size(378, 192);
@@ -382,12 +383,23 @@
             this.lbl_YeniVeri.TabIndex = 45;
             this.lbl_YeniVeri.Text = "Yeni Veri Gir";
             // 
+            // btn_port
+            // 
+            this.btn_port.Location = new System.Drawing.Point(887, 95);
+            this.btn_port.Name = "btn_port";
+            this.btn_port.Size = new System.Drawing.Size(106, 34);
+            this.btn_port.TabIndex = 46;
+            this.btn_port.Text = "Okutmaya Başla";
+            this.btn_port.UseVisualStyleBackColor = true;
+            this.btn_port.Click += new System.EventHandler(this.btn_port_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1292, 690);
+            this.Controls.Add(this.btn_port);
             this.Controls.Add(this.lbl_YeniVeri);
             this.Controls.Add(this.lbl_Scan);
             this.Controls.Add(this.scannerBilgi);
@@ -464,6 +476,7 @@
         private System.Windows.Forms.TextBox scannerBilgi;
         private System.Windows.Forms.Label lbl_Scan;
         private System.Windows.Forms.Label lbl_YeniVeri;
+        private System.Windows.Forms.Button btn_port;
     }
 }
 
