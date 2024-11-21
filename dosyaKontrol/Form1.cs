@@ -56,6 +56,10 @@ namespace dosyaKontrol
         }
         private void Form1_Load_1(object sender, EventArgs e)
         {
+
+            DirectoryInfo aktarimKlasoruOlustur = new DirectoryInfo("C:\\Users\\dolfi\\OneDrive\\Masaüstü");
+            aktarimKlasoruOlustur.CreateSubdirectory("Aktarim");
+            aktarimKlasoruOlustur.CreateSubdirectory("Aktarilan");
             this.BackColor = System.Drawing.SystemColors.Control;
             Getir();
             aktarimTimer.Start();       // 10 saniyede bir aktarımdan aktarılana doğru aktarım işlemi başlıyor
@@ -69,6 +73,8 @@ namespace dosyaKontrol
             dataTable.Columns.Add("PartiNum", typeof(string));
             dataTable.Columns.Add("SupplierNum", typeof(string));
             dataTable.Columns.Add("Tarih", typeof(DateTime));
+
+           
         }
         public void LoadDataFromExcelFiles(string directoryPath)
         {
@@ -485,6 +491,7 @@ namespace dosyaKontrol
         }     
         private void AktarimYap(object sender, EventArgs e)
         {
+       
             var excelDosyalar = Directory.GetFiles(aktarimKlasor, "*.xlsx");
             var aktarilanDosyalar = Directory.GetFiles(aktarilanKlasor, "*.xlsx");
 
